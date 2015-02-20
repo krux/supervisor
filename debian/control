@@ -1,0 +1,22 @@
+Source: supervisor
+Section: admin
+Priority: extra
+Maintainer: Qijiang Fan <fqj1994@gmail.com>
+Build-Depends: debhelper (>= 9), python-setuptools, python-all (>= 2.6.6~3)
+X-Python-Version: >= 2.4
+VCS-Git: git://anonscm.debian.org/collab-maint/supervisor.git
+VCS-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/supervisor.git;a=summary
+Standards-Version: 3.9.4
+Homepage: http://supervisord.org/
+
+Package: supervisor
+Architecture: all
+Depends: python, python-meld3, python-pkg-resources (>= 0.6c7), ${misc:Depends}
+Description: A system for controlling process state
+ Supervisor is a system for controlling and maintaining process state,
+ similar to what init does, but not intended as an init replacement.
+ .
+ It will manage individual processes or groups of processes that
+ need to be started and stopped in order, and it is possible to
+ control individual process state via an rpc mechanism, thus allowing
+ ordinary users to restart processes.
