@@ -1,4 +1,4 @@
-supervisor (3.1.3~krux2) unstable; urgency=low
+supervisor (3.1.3~krux3) unstable; urgency=low
 
   * Add the path to the config file as part of the init file
 
