@@ -1,3 +1,9 @@
+supervisor (3.1.3~krux6) unstable; urgency=low
+
+  * Fix the deb package to be able to start on trusty
+  
+ -- Krux Jenkins <ops@krux.com>  Fri, 20 Feb 2015 07:01:04 +0000
+
 supervisor (3.1.3~krux5) unstable; urgency=low
 
   * Add the path to the config file as part of the init file
