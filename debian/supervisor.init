@@ -110,8 +110,8 @@ case "$1" in
             sleep 1;
         done
     fi
-	echo "$NAME."
-	;;
+    echo "$NAME."
+    ;;
   force-stop)
 	echo -n "Forcefully stopping $DESC: "
         force_stop
