@@ -100,10 +100,18 @@ case "$1" in
         fi
 	;;
   stop)
-	echo -n "Stopping $DESC: "
-	start-stop-daemon --stop --quiet --oknodo --pidfile $PIDFILE 
-	echo "$NAME."
-	;;
+    echo -n "Stopping $DESC: "
+    if [ -e $PIDFILE ]; then
+        pid=$(cat $PIDFILE)
+    fi
+    start-stop-daemon --stop --quiet --oknodo --pidfile $PIDFILE
+    if [ ! -z "$pid" ]; then
+        while [ -e /prod/$pid ]; do
+            sleep 1;
+        done
+    fi
+    echo "$NAME."
+    ;;
   force-stop)
 	echo -n "Forcefully stopping $DESC: "
         force_stop
