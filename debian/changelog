@@ -1,3 +1,9 @@
+supervisor (3.1.3~krux7) unstable; urgency=low
+
+  * Fix the init script to wait for supervisor to quit before returning from stop
+  
+ -- Krux Jenkins <ops@krux.com>  Mon, 2 Mar 2015 15:28:00 +0000
+
 supervisor (3.1.3~krux6) unstable; urgency=low
 
   * Fix the deb package to be able to start on trusty
