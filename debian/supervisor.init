@@ -106,7 +106,7 @@ case "$1" in
     fi
     start-stop-daemon --stop --quiet --oknodo --pidfile $PIDFILE
     if [ ! -z "$pid" ]; then
-        while [ -e /prod/$pid ]; do
+        while [ -e /proc/$pid ]; do
             sleep 1;
         done
     fi
